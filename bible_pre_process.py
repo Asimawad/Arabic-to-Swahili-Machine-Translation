@@ -12,7 +12,7 @@ number_pattern = re.compile("\d+")
 
 
 def main():
-    bible = fitz.open("en_bible.pdf")
+    bible = fitz.open("sw_bible.pdf")
     toc = bible.get_toc()
     num_chapters = len(toc)
 
@@ -70,7 +70,7 @@ def process_book(bible, start, end):
 def write_bible(books):
     for i, chapters in books:
         for j, chapter in chapters.items():
-            with open(f"en/{i}_{j}.txt", "w") as f:
+            with open(f"sw/{i}_{j}.txt", "w") as f:
                 f.write("\n".join(chapter))
 
 
