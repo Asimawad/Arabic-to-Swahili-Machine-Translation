@@ -1,5 +1,4 @@
 #!/bin/env python3
-
 import fitz  # install using: pip install PyMuPDF
 # reads the pdf files
 import re
@@ -72,6 +71,8 @@ def write_bible(books):
         for j, chapter in chapters.items():
             with open(f"sw/{i}_{j}.txt", "w") as f:
                 f.write("\n".join(chapter))
+
+
 
 
 if __name__ == "__main__":
